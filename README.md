@@ -28,7 +28,7 @@ Before you begin, ensure you have the following:
 
    ```bash
    git clone https://github.com/itsmdshahin/BookStore-Server.git
-   cd task-management-system
+   cd bookstore
    npm install
 
 2. Create a .env file in the project root and add your MongoDB connection URL:
