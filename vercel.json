@@ -1,11 +1,71 @@
 {
     "version": 2,
-    "routes": [
-      { "src": "/api/(.*)", "dest": "/app.js" },
-      { "src": "/(.*)", "dest": "/app.js" }
-    ],
     "builds": [
-      { "src": "/app.js", "use": "@vercel/node" }
-    ]
+      {
+        "src": "app.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [ 
+      {
+        "src": "/allbooks",
+        "dest": "/.serverless/handler.js",
+        "methods": ["GET"]
+      },
+      {
+        "src": "/allbooks/:id",
+        "dest": "/.serverless/handler.js",
+        "methods": ["GET"]
+      },
+      {
+        "src": "/addabook",
+        "dest": "/.serverless/handler.js",
+        "methods": ["POST"]
+      },
+      {
+        "src": "/updatebook/:id",
+        "dest": "/.serverless/handler.js",
+        "methods": ["PUT"]
+      },
+      {
+        "src": "/deletebook/:id",
+        "dest": "/.serverless/handler.js",
+        "methods": ["DELETE"]
+      },
+      {
+        "src": "/register",
+        "dest": "/.serverless/handler.js",
+        "methods": ["POST"]
+      },
+      {
+        "src": "/login",
+        "dest": "/.serverless/handler.js",
+        "methods": ["POST"]
+      },
+      {
+        "src": "/profile/:id",
+        "dest": "/.serverless/handler.js",
+        "methods": ["GET"]
+      },
+      {
+        "src": "/books/user/:id",
+        "dest": "/.serverless/handler.js",
+        "methods": ["GET"]
+      }, 
+      {
+        "src": "/(.*)",
+        "dest": "public/index.html"
+      }, 
+      {
+        "src": "/",
+        "dest": "public/index.html"
+      },
+      {
+        "src": "/profile",
+        "dest": "public/profile.html"
+      }, 
+    ],
+    "env": {
+      "MONGODB_URL": "${MONGODB_URL}"
+    }
   }
-  
