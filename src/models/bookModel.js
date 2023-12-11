@@ -1,4 +1,4 @@
-const mongoose = require('../../config/database');
+const mongoose = require('mongoose');
 
 const bookModelSchema = new mongoose.Schema({
     title: {
@@ -16,6 +16,9 @@ const bookModelSchema = new mongoose.Schema({
     publicationDate: {
         type: String,
         default: Date.now
+    },
+    UserId:{
+        type: String,
     },
     date: {
         type: String,
