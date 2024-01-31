@@ -2,9 +2,9 @@
   "name": "bookstore",
   "version": "1.1.1",
   "main": "app.js",
-  "scripts": {
-    "start": "nodemon app.js",
-    "dev": "nodemon app.js",
+  "scripts": { 
+    "start": "node index.js",
+    "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
