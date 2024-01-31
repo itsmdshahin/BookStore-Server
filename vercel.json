@@ -1,0 +1,58 @@
+{
+    "version": 2,
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/app.js"
+        },
+        {
+            "src": "/api/(.*)",
+            "dest": "/app.js"
+        },
+        {
+            "src": "/api/allbooks",
+            "dest": "/app.js"
+        },
+        {
+            "src": "/api/allbooks/:id",
+            "dest": "/app.js"
+        },
+        {
+            "src": "/api/addabook",
+            "methods": [
+                "POST"
+            ],
+            "dest": "/app.js"
+        },
+        {
+            "src": "/api/updatebook/:id",
+            "dest": "/app.js"
+        },
+        {
+            "src": "/api/register",
+            "dest": "/app.js"
+        },
+        {
+            "src": "/api/login",
+            "dest": "/app.js"
+        },
+        {
+            "src": "/api/deletebook/:id",
+            "dest": "/app.js"
+        },
+        {
+            "src": "/api/profile/:id",
+            "dest": "/app.js"
+        },
+        {
+            "src": "/books/user/:id",
+            "dest": "/app.js"
+        }
+    ],
+    "builds": [
+        {
+            "src": "/app.js",
+            "use": "@vercel/node"
+        }
+    ]
+}
